@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVENTEEN</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #91b6d7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5b57b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .song-section {
+            display: flex; /* 让歌曲部分水平排列 */
+            justify-content: space-around; /* 歌曲之间的间距 */
+            margin-top: 20px;
+        }
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* 歌曲项水平排列 */
+            justify-content: space-around; /* 歌曲项之间的间距 */
+            width: 100%; /* 宽度为100%，使得歌曲项在行内对齐 */
+        }
+        .song-item {
+            background-color: rgb(202, 219, 237);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(114, 118, 161, 0.1);
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 内容居中 */
+            width: 30%; /* 每个歌曲项占据页面的 30% 宽度 */
+        }
+        .song-item img {
+            width: 200px; /* 图片大小 */
+            height: 200px; /* 图片大小 */
+            object-fit: cover; /* 保证图片比例 */
+            border-radius: 8px;
+            margin-bottom: 10px; /* 图片和歌名之间的距离 */
+        }
+        footer {
+            background-color: #7ba9d7;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SEVENTEEN</h1>
+    </header>
+
+    <main>
+        <h2>About SEVENTEEN</h2>
+        <p>SEVENTEEN is one of the most successful and respected K-pop groups in the world, known for their exceptional talent, hard work, and dedication. Their ability to blend strong vocal performances, intricate choreography, and creative contributions from all members has allowed them to stand out in a highly competitive industry. With a strong global fanbase, CARAT, and a discography filled with chart-topping hits, SEVENTEEN’s influence on K-pop and music in general continues to grow.</p>
+
+        <h3>Songs by SEVENTEEN</h3>
+
+        <!-- 歌曲部分 -->
+        <div class="song-section">
+            <ul class="song-list">
+                <li class="song-item">
+                    <img src="images/rock with you.jpg" alt="yes and?">
+                    <h4>Rock with you</h4>
+                    <audio id="audio1" controls>
+                        <source src="audio/SEVENTEEN_Rock with you.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <img src="images/darling.jpg" alt="Song 2 Cover">
+                    <h4>Darl+ing</h4>
+                    <audio id="audio2" controls>
+                        <source src="audio/SEVENTEEN_Darl+ing.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li class="song-item">
+                    <img src="images/very nice.jpg" alt="Song 3 Cover">
+                    <h4>Very Nice</h4>
+                    <audio id="audio3" controls>
+                        <source src="audio/SEVENTEEN_VERY NICE.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Music by Country | <a href="#" style="color: white;">Privacy Policy</a> | <a href="#" style="color: white;">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // 获取所有音频元素
+        const audios = document.querySelectorAll('audio');
+
+        // 监听音频点击事件
+        audios.forEach(audio => {
+            audio.addEventListener('play', function () {
+                // 在播放当前音频时暂停其他音频，并将它们重置到起始位置
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0; // 将暂停的音频重置到开头
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

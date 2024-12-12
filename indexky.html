@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KY Music Station</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0a2a3d; /* Dark blue background */
+      color: white;
+    }
+
+    header {
+      background-color: #003b5c; /* Darker blue header */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Country List Section */
+    .category-section {
+      padding: 20px;
+      background-color: #004a6f; /* Lighter blue background */
+      margin: 20px 0;
+    }
+
+    .category-title {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .country-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .country-item {
+      background-color: #006994; /* Mid-tone blue */
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .country-item h3 {
+      font-size: 1.6em;
+      margin: 10px 0;
+    }
+
+    .country-item p {
+      color: #bbb;
+    }
+
+    .country-item a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #0099cc;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .country-item a:hover {
+      background-color: #0077a3;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #003b5c;
+      color: #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">KY Music Station</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#countries">Countries</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Country List Section (Home) -->
+    <section id="countries" class="category-section">
+      <div class="category-title">Explore Music by Country</div>
+      <div class="country-list">
+        <!-- Country 1 -->
+        <div class="country-item">
+          <h3>USA</h3>
+          <p>Explore the best music artists from the United States.</p>
+          <a href="usa.html">View USA Artists</a>
+        </div>
+
+        <!-- Country 2 -->
+        <div class="country-item">
+          <h3>China</h3>
+          <p>Discover top artists from the China.</p>
+          <a href="china.html">View China Artists</a>
+        </div>
+
+        <!-- Country 3 -->
+        <div class="country-item">
+          <h3>Korea</h3>
+          <p>Enjoy music from Korea Idol Group.</p>
+          <a href="korea.html">View Korea Idol Group</a>
+        </div>
+
+        <!-- Country 4 -->
+        <div class="country-item">
+          <h3>Japan</h3>
+          <p>Listen to famous Japan Artists.</p>
+          <a href="japan.html">View Japan Artists</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Music by Country | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+</body>
+</html>
